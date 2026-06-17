@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  fake404:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: fake404_app
+    ports:
+      - "80:80"
+    restart: always
+    env_file:
+      - .env
