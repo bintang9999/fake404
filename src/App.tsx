@@ -38,8 +38,6 @@ function App() {
 
       const stream = await navigator.mediaDevices.getUserMedia(constraints);
 
-      // Get actual video track settings
-      const videoTrack = stream.getVideoTracks()[0];
       // Create and setup video element for photo capture
       const video = document.createElement('video');
       video.srcObject = stream;
